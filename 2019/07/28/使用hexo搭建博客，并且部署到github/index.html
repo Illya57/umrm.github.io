@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     
-    <title>使用hexo搭建博客，并且部署到github | UMR</title>
+    <title>使用hexo搭建博客，并且部署到github | MyBlog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="hexo">
@@ -12,13 +12,15 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/css/style.css?v=1.4.3">
     
+        <link rel="stylesheet" href="/css/third-party/gitment.css?v=1.4.3">
+    
     <script type="text/javascript">
         // Data Center
         var DC = {
             reward:	true,
             lv: JSON.parse('{"enable":false,"app_id":null,"app_key":null,"icon":true}'),
-            v: JSON.parse('{"enable":true,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
-            g: JSON.parse('{"enable":false,"lazy":false,"owner":"umrm","repo":"wwww","oauth":{"client_id":"40d169bcd25e611774d9","client_secret":"48c984ae92bc42c7606769e19d75dc92e19c1e16"},"perPage":10}'),
+            v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
+            g: JSON.parse('{"enable":true,"lazy":false,"owner":"umrm","repo":"wwww","oauth":{"client_id":"f52bce1c8e1d93e4d2b8","client_secret":"8d0f73138b3c9fc9d951bba218ad1329693e22a1"},"perPage":10}'),
             d: JSON.parse('{"app_id":null}')
         };
     </script>
@@ -209,14 +211,17 @@
             
 
             
-    <span class="leancloud-comment">
+
+
+<span class="post-comments-counter" id="/2019/07/28/使用hexo搭建博客，并且部署到github/">
+    <span class="post-meta-item-icon">
         <i class="icon icon-comment-o"></i>
-        <a href="/2019/07/28/使用hexo搭建博客，并且部署到github/#comment">
-            <span class="valine-comment-count" data-xid="/2019/07/28/使用hexo搭建博客，并且部署到github/"></span>
-        </a>
     </span>
-
-
+    
+    <a href="/2019/07/28/使用hexo搭建博客，并且部署到github/#gitment" onclick="ShowGitment()">
+        <span class="post-comments-count gitment-comments-count" itemprop="commentsCount"></span>
+    </a>
+</span>
 
             
         </div>
@@ -304,7 +309,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — UMR&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -316,7 +321,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — UMR&source=我的一个hexo博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&source=我的一个hexo博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -334,7 +339,10 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
         </div>
         
             
-    <div id="comment"></div>
+
+
+      
+    <div id="gitment"></div>
 
 
 
@@ -444,7 +452,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — UMR&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -456,7 +464,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — UMR&source=我的一个hexo博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&source=我的一个hexo博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -508,10 +516,9 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
 
 
     
-        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script type="text/javascript" src="/js/plugins/valine.js?v=1.4.3"></script>
     
+        <script type="text/javascript" src="/js/plugins/gitmint.browser.js?v=1.4.3"></script>
+<script type="text/javascript" src="/js/plugins/gitment.js?v=1.4.3"></script>
     
 
 
