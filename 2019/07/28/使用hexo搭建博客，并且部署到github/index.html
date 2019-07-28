@@ -218,43 +218,20 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             
-            <h1 id="使用hexo搭建博客，并且部署到github"><a href="#使用hexo搭建博客，并且部署到github" class="headerlink" title="使用hexo搭建博客，并且部署到github"></a>使用hexo搭建博客，并且部署到github</h1><p>## </p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1.安装git （这个我就不细说了）<br>2.安装nodejs<br>3.安装hexo<br>4.搭建博客<br>5.写一篇文章<br>6.部署到github（你需要有一个github账号）</p>
 <h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p>去官网下载最新版本，安装</p>
 <p>安装好之后可以验证一下：</p>
-<blockquote>
-<p>node -v</p>
-</blockquote>
-<p>然后安装cnpm（可以不使用cnpm）：</p>
-<blockquote>
-<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
-</blockquote>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>使用命令：</p>
-<blockquote>
-<p>cnpm install -g hexo-cli</p>
-</blockquote>
-<p>如果没有安装cnpm，就用npm：</p>
-<blockquote>
-<p>npm install -g hexo-cli</p>
-</blockquote>
-<p>安装完之后可以验证一下：</p>
-<blockquote>
-<p>hexo -v</p>
-</blockquote>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>直接在某个位置新建一个文件夹，名字随意，比如blog</p>
+<pre><code>node -v</code></pre><p>然后安装cnpm（可以不使用cnpm）：</p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>使用命令：</p>
+<pre><code>cnpm install -g hexo-cli</code></pre><p>如果没有安装cnpm，就用npm：</p>
+<pre><code>npm install -g hexo-cli</code></pre><p>安装完之后可以验证一下：</p>
+<pre><code>hexo -v</code></pre><h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>直接在某个位置新建一个文件夹，名字随意，比如blog</p>
 <p>也可以在命令行窗口使用 mkdir blog 新建一个文件夹</p>
 <p>然后进到那个文件夹目录：</p>
-<blockquote>
-<p>cd blog</p>
-</blockquote>
-<p>再使用hexo生成一个博客：</p>
-<blockquote>
-<p>hexo init</p>
-</blockquote>
-<p>这样就成功在本地搭建了一个博客，可以启动看看：</p>
-<blockquote>
-<p>hexo s<br>ctrl+c可以停止</p>
-</blockquote>
+<pre><code>cd blog</code></pre><p>再使用hexo生成一个博客：</p>
+<pre><code>hexo init</code></pre><p>这样就成功在本地搭建了一个博客，可以启动看看：</p>
+<pre><code>hexo s</code></pre><p>ctrl+c可以停止</p>
 <p>这样就启动好了</p>
 <figure class="image-box">
                 <a rel=使用hexo搭建博客，并且部署到github href="001.jpg" title="" data-fancybox="images"><img src="001.jpg" alt title class></a>
@@ -262,17 +239,12 @@
             </figure>
 <p>打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
 <h2 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h2><p>在blog目录下</p>
-<blockquote>
-<p>hexo new “我的文章”</p>
-</blockquote>
-<p>这个是基于markdown格式的,你可以去看看markdown语法。</p>
+<pre><code>hexo new &quot;我的文章&quot;</code></pre><p>这个是基于markdown格式的,你可以去看看markdown语法。</p>
 <p>然后重新生成一下(在blog的根目录)</p>
-<blockquote>
-<p>hexo clean<br>hexo g</p>
-</blockquote>
-<p>刷新一下网页就可以看到你的文章了</p>
+<pre><code>hexo clean
+hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
 <p>最后我们可以把它部署到github上</p>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>1.登录到你的github账号<br>2.新建一个仓库</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p> 先登录到你的github账号<br> 再新建一个仓库</p>
 <pre><code>仓库名字要是 你的github昵称.github.io
 如 umrm.github.io
 描述可以随便写一个   
@@ -285,10 +257,7 @@
   type: git
   repo: https://github.com/umrm/umrm.github.io.git
   branch: master</code></pre><h4 id="可以部署了"><a href="#可以部署了" class="headerlink" title="可以部署了"></a>可以部署了</h4><p>使用hexo d命令来部署到github上</p>
-<blockquote>
-<p>hexo d</p>
-</blockquote>
-<p>第一次会需要你输入github的账号和密码登录一下，以后就不用了 </p>
+<pre><code>hexo d</code></pre><p>第一次会需要你输入github的账号和密码登录一下，以后就不用了 </p>
 <h4 id="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><a href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问" class="headerlink" title="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"></a>成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</h4><p>hexo有一个默认的主题，你还可以在网上去下载别的主题</p>
 
         </div>
@@ -297,7 +266,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-07-28T06:08:48.113Z" itemprop="dateUpdated">2019-07-28 14:08:48</time>
+    最后更新时间：<time datetime="2019-07-28T06:31:48.535Z" itemprop="dateUpdated">2019-07-28 14:31:48</time>
 </span><br>
 
 
@@ -372,7 +341,7 @@
         <aside class="post-widget">
             <nav class="post-toc-wrap" id="post-toc">
                 <strong>目录</strong>
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用hexo搭建博客，并且部署到github"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用hexo搭建博客，并且部署到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装nodejs"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装nodejs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建博客"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">搭建博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新建一篇文章"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">新建一篇文章</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署到github"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">部署到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#你需要安装一个Git的插件"><span class="post-toc-number">1.6.0.1.</span> <span class="post-toc-text">你需要安装一个Git的插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#再设置一下"><span class="post-toc-number">1.6.0.2.</span> <span class="post-toc-text">再设置一下</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#可以部署了"><span class="post-toc-number">1.6.0.3.</span> <span class="post-toc-text">可以部署了</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><span class="post-toc-number">1.6.0.4.</span> <span class="post-toc-text">成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</span></a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装nodejs"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装nodejs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建博客"><span class="post-toc-number">5.</span> <span class="post-toc-text">搭建博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新建一篇文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">新建一篇文章</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署到github"><span class="post-toc-number">7.</span> <span class="post-toc-text">部署到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#你需要安装一个Git的插件"><span class="post-toc-number">7.0.1.</span> <span class="post-toc-text">你需要安装一个Git的插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#再设置一下"><span class="post-toc-number">7.0.2.</span> <span class="post-toc-text">再设置一下</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#可以部署了"><span class="post-toc-number">7.0.3.</span> <span class="post-toc-text">可以部署了</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><span class="post-toc-number">7.0.4.</span> <span class="post-toc-text">成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</span></a></li></ol></li></ol></li></ol>
             </nav>
             <div class="toc-bar"><div>
         </aside>
