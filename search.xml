@@ -39,7 +39,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
 <h4 id="你需要安装一个Git的插件"><a href="#你需要安装一个Git的插件" class="headerlink" title="你需要安装一个Git的插件"></a>你需要安装一个Git的插件</h4><blockquote>
 <p>cnpm install –save hexo-deployer-git</p>
 </blockquote>
-<h4 id="再设置一下"><a href="#再设置一下" class="headerlink" title="再设置一下"></a>再设置一下</h4><p>在blog目录下打开配置文件_config.yml<br>找到deploy<br>把repo改成你刚建的那个仓库，别忘了空格</p>
+<h4 id="再设置一下"><a href="#再设置一下" class="headerlink" title="再设置一下"></a>再设置一下</h4><p>在blog目录下打开配置文件_config.yml<br>找到deploy<br>把repo改成你刚建的那个仓库，别忘了冒号后有空格</p>
 <pre><code>deploy:
   type: git
   repo: https://github.com/umrm/umrm.github.io.git
