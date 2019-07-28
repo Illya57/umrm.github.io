@@ -1,233 +1,439 @@
 <!DOCTYPE html>
-<html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
-    
-    
-    <title>使用hexo搭建博客，并且部署到github | MyBlog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="keywords" content="hexo">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="/css/style.css?v=1.4.3">
-    
-        <link rel="stylesheet" href="/css/third-party/gitment.css?v=1.4.3">
-    
-    <script type="text/javascript">
-        // Data Center
-        var DC = {
-            reward:	true,
-            lv: JSON.parse('{"enable":false,"app_id":null,"app_key":null,"icon":true}'),
-            v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
-            g: JSON.parse('{"enable":true,"lazy":false,"owner":"umrm","repo":"gitment","oauth":{"client_id":"f52bce1c8e1d93e4d2b8","client_secret":"8d0f73138b3c9fc9d951bba218ad1329693e22a1"},"perPage":10}'),
-            d: JSON.parse('{"app_id":null}')
-        };
-    </script>
-    <script type="text/javascript">
-        window.lazyScripts=[];
-    </script>
-    
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="前言最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。 步骤1.安装git （这个我就不细说了）2.安装nodejs3.安装hexo4.搭建博客5.写一篇文章6.部署到github（你需要有一个github账号） 安装nodej">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo搭建博客，并且部署到github">
+<meta property="og:url" content="http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/index.html">
+<meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="前言最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。 步骤1.安装git （这个我就不细说了）2.安装nodejs3.安装hexo4.搭建博客5.写一篇文章6.部署到github（你需要有一个github账号） 安装nodej">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/001.jpg">
+<meta property="og:updated_time" content="2019-07-28T11:53:23.892Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用hexo搭建博客，并且部署到github">
+<meta name="twitter:description" content="前言最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。 步骤1.安装git （这个我就不细说了）2.安装nodejs3.安装hexo4.搭建博客5.写一篇文章6.部署到github（你需要有一个github账号） 安装nodej">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/001.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>使用hexo搭建博客，并且部署到github | MyBlog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<body>
-    <div id="loading" class="active"></div>
+  
+  
+    
+  
 
-    <aside id="menu" class="">
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap">
-      
-      <img src="/img/brand.jpg" class="brand-bg">
-      
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">UMR</h5>
-          <a href="mailto:1799961533@qq.com" title="1799961533@qq.com" class="mail">
-            
-              <span>1</span>
-            
-              <span>7</span>
-            
-              <span>9</span>
-            
-              <span>9</span>
-            
-              <span>9</span>
-            
-              <span>6</span>
-            
-              <span>1</span>
-            
-              <span>5</span>
-            
-              <span>3</span>
-            
-              <span>3</span>
-            
-              <span>@</span>
-            
-              <span>q</span>
-            
-              <span>q</span>
-            
-              <span>.</span>
-            
-              <span>c</span>
-            
-              <span>o</span>
-            
-              <span>m</span>
-            
-          </a>
-        </hgroup>
-        
-        <ul class="menu-link">
-          
-              <li>
-                <a href="https://github.com/umrm" target="_blank">
-                  <i class="icon icon-lg icon-github"></i>
-                </a>
-              </li>
-            
-        </ul>
-        
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                HOME
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                CATEGORIES
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                TAGS
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                ARCHIVES
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/about"  >
-                <i class="icon icon-lg icon-user"></i>
-                ABOUT
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row clearfix">
-        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">
-            <span>使用hexo搭建博客，并且部署到github</span>
-            
-        </div>
-        
-        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
-            <i class="icon icon-lg icon-search"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header post-header">
-    <img src="/img/banner.jpg" class="header-bg">
-    <div class="container fade-scale">
-        <h1 class="title">使用hexo搭建博客，并且部署到github</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2019-07-28T06:07:07.000Z" itemprop="datePublished" class="page-time">
-  2019-07-28
-</time>
-
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/记录/">记录</a></li></ul>
-
-            
-        </h5>
-        
-    </div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
     
 
-</header>
-
-<div id="site_search">
-    <div class="search-title clearfix">
-        <span class="pull-left">
-          <i class="icon icon-lg icon-search"></i>
-        </span>
-        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
-        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
-          <i class="icon icon-lg icon-close"></i>
-        </a>
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MyBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div id="local-search-result"></div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 
-<div class="container body-wrap">
-    <article id="post-使用hexo搭建博客，并且部署到github"
-  class="post-article article-type-post" itemprop="blogPost">
-    <div class="post-card">
-        <h1 class="post-card-title">使用hexo搭建博客，并且部署到github</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2019-07-28 14:07:07" datetime="2019-07-28T06:07:07.000Z"  itemprop="datePublished">2019-07-28</time>
 
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/记录/">记录</a></li></ul>
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
 
-
-
-            
-
-            
-
-
-<span class="post-comments-counter" id="/2019/07/28/使用hexo搭建博客，并且部署到github/">
-    <span class="post-meta-item-icon">
-        <i class="icon icon-comment-o"></i>
-    </span>
     
-    <a href="/2019/07/28/使用hexo搭建博客，并且部署到github/#gitment" onclick="ShowGitment()">
-        <span class="post-comments-count gitment-comments-count" itemprop="commentsCount"></span>
-    </a>
-</span>
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="UMR">
+      <meta itemprop="description" content="我的一个hexo博客">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MyBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用hexo搭建博客，并且部署到github
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-28 14:07:07 / 修改时间：19:53:23" itemprop="dateCreated datePublished" datetime="2019-07-28T14:07:07+08:00">2019-07-28</time>
+            </span>
+          
+
+          
+            
 
             
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/记录/" itemprop="url" rel="index"><span itemprop="name">记录</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
         </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。</p>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1.安装git （这个我就不细说了）<br>2.安装nodejs<br>3.安装hexo<br>4.搭建博客<br>5.写一篇文章<br>6.部署到github（你需要有一个github账号）</p>
 <h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p>去官网下载最新版本，安装</p>
 <p>安装好之后可以验证一下：</p>
@@ -241,12 +447,7 @@
 <pre><code>cd blog</code></pre><p>再使用hexo生成一个博客：</p>
 <pre><code>hexo init</code></pre><p>这样就成功在本地搭建了一个博客，可以启动看看：</p>
 <pre><code>hexo s</code></pre><p>ctrl+c可以停止</p>
-<p>这样就启动好了</p>
-<figure class="image-box">
-                <a rel=使用hexo搭建博客，并且部署到github href="001.jpg" title="" data-fancybox="images"><img src="001.jpg" alt title class></a>
-                <p></p>
-            </figure>
-<p>打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<p>这样就启动好了<br><img src="001.jpg" alt><br>打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
 <h2 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h2><p>在blog目录下</p>
 <pre><code>hexo new &quot;我的文章&quot;</code></pre><p>这个是基于markdown格式的,你可以去看看markdown语法。</p>
 <p>然后重新生成一下(在blog的根目录)</p>
@@ -269,290 +470,399 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
 <pre><code>hexo d</code></pre><p>第一次会需要你输入github的账号和密码登录一下，以后就不用了 </p>
 <h4 id="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><a href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问" class="headerlink" title="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"></a>成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</h4><p>hexo有一个默认的主题，你还可以在网上去下载别的主题</p>
 
-        </div>
-        
-<blockquote class="post-copyright">
-    <div class="content">
-        
-<span class="post-time">
-    最后更新时间：<time datetime="2019-07-28T10:33:31.952Z" itemprop="dateUpdated">2019-07-28 18:33:31</time>
-</span><br>
-
-
-        
-        转载注明出处，原文地址：<a href="/2019/07/28/使用hexo搭建博客，并且部署到github/" target="_blank" rel="external">http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/</a>
-        
+      
     </div>
-    <footer>
-        <a href="http://yoursite.com">
-            <img src="/img/avatar.jpg" alt="UMR">
-            UMR
-        </a>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
     </footer>
-</blockquote>
+  </div>
+  
+  
+  
+  </article>
 
-        
-            <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
+  </div>
 
-            
-        
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
-            <div class="page-share-wrap">
+          </div>
+          
+  
     
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&source=我的一个hexo博客" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
+    <div class="comments" id="gitalk-container"></div>
+  
 
 
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
 
         </div>
         
-            
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
 
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
 
       
-    <div id="gitment"></div>
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="UMR">
+  
+  <p class="site-author-name" itemprop="name">UMR</p>
+  <div class="site-description motion-element" itemprop="description">我的一个hexo博客</div>
+</div>
 
 
-
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
         
-    </div>
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
     
 
     
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
     
-        <aside class="post-widget">
-            <nav class="post-toc-wrap" id="post-toc">
-                <strong>目录</strong>
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装nodejs"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装nodejs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建博客"><span class="post-toc-number">5.</span> <span class="post-toc-text">搭建博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新建一篇文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">新建一篇文章</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署到github"><span class="post-toc-number">7.</span> <span class="post-toc-text">部署到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#你需要安装一个Git的插件"><span class="post-toc-number">7.0.1.</span> <span class="post-toc-text">你需要安装一个Git的插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#再设置一下"><span class="post-toc-number">7.0.2.</span> <span class="post-toc-text">再设置一下</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#可以部署了"><span class="post-toc-number">7.0.3.</span> <span class="post-toc-text">可以部署了</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><span class="post-toc-number">7.0.4.</span> <span class="post-toc-text">成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</span></a></li></ol></li></ol></li></ol>
-            </nav>
-            <div class="toc-bar"><div>
-        </aside>
-    
-</article>
 
-    <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
         
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
+          
+            <a href="/tags/">
+          
         
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/reward-wechat.jpg" alt="打赏二维码">
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
         </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/reward-wechat.jpg" data-alipay="/img/reward-alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nodejs"><span class="nav-number">3.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">4.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客"><span class="nav-number">5.</span> <span class="nav-text">搭建博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建一篇文章"><span class="nav-number">6.</span> <span class="nav-text">新建一篇文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到github"><span class="nav-number">7.</span> <span class="nav-text">部署到github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#你需要安装一个Git的插件"><span class="nav-number">7.0.1.</span> <span class="nav-text">你需要安装一个Git的插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再设置一下"><span class="nav-number">7.0.2.</span> <span class="nav-text">再设置一下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可以部署了"><span class="nav-number">7.0.3.</span> <span class="nav-text">可以部署了</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><span class="nav-number">7.0.4.</span> <span class="nav-text">成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
     </div>
-</div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
 
-</div>
-
+        
+      </div>
     </main>
-    <footer class="footer ">
-    
-    <div class="top">
-        
-            <p>
-    <span>Links：</span>
-    
-    <span class="blogroll-item">
-        <a href="https://www.lujingtao.com" target="_blank">HOME</a>
-    </span>
-    
-</p>
 
-        
-    </div>
-    
-    <div class="bottom">
-        <p>
-            <span>
-                UMR &copy; 2019
-            </span>
-        		
-           	
-            
-            
-            <span>
-	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
-            </span>
-            
-            
-            
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">UMR</span>
 
-            
-                
-<span class="site-uv" title="总访客量">
-    <i class="icon icon-user"></i>
-    <i class="busuanzi-value" id="busuanzi_value_site_uv"></i>
-</span>
+  
 
-
-<span class="site-pv" title="总访问量">
-    <i class="icon icon-eye"></i>
-    <i class="busuanzi-value" id="busuanzi_value_site_pv"></i>
-</span>
-
-            
-        </p>
-    </div>
-</footer>
-
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/&title=《使用hexo搭建博客，并且部署到github》 — MyBlog&source=我的一个hexo博客" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3aMXLEMAgF0Nz/0kmbxtIHJGcz81x5nF2tngpDgK+v+Pr+da2fP90/rZn/bvL55oWHh4c32PrTcsln1ltfH0TypLkfPDw8vGu89Raflk7+un6+3m5+NI/P8fDw8D6ANzmC5CCSlBoPDw/vf/GSVDgJEvPqAR4eHt7f8vLl8kJDj5GUfa/UWvDw8PBqddeoi/Q591f6e3h4eHjjrnoeJHpBZf1CX4efaLd4eHh4F3i94adewSIfLzg1pIWHh4d3m9crKFTbYDmyGqgeDxcPDw/vdV61EJCPVfWOJk/K8fDw8G7weqNR6yfV0sMkkGyScjw8PLxXeMnXqqltHiryUaooaOHh4eG9yOstnTe0qsNYzdErPDw8vGu8GwWFKq93NJt7PDw8vMu8cmOplWrnZeL8CDZlXDw8PLwLvLNlhVMrJ6nz5mjw8PDwLvDyUYDJEqcaWknpBA8PD+82L3/55sluUmCtbnTUAMPDw8M7yquCq9+qFojz7VbXx8PDwzvFy4u21Wb/+oV+tqzwqMDDw8N7hZcnxEmS3UuXe8n0ZugKDw8P7wKv2v6fD1pNWmJJcMLDw8O7weu1//OQMNlQbyebijUeHh7emNcrtubBI3nR94JQUkDBw8PDu8HLS7Fn0+hqy7861rBJqfHw8PDGvF5SWx2cSvDVtD46IDw8PLxrvMkPzEu01YS+MPKFh4eHd5mXlGh75YBqmMkDz2bneHh4eEd538VrstHeEEBhOGBSusXDw8Prv1GbhdQcUw0t+a+MwgkeHh5ekTcPBtUXem+jeVkEDw8P7x3evHHVS46rYwTNdBkPDw/vT3m9Lc6PIC8K4+Hh4X0aL7/PU/OzzTM8PDy8d3h5I7+3obzdNW+e4eHh4d3m9f6jP9Xo6rW4jsHw8PDwas9/ABZofYIwVkL6AAAAAElFTkSuQmCC" alt="微信分享二维码">
+  
 </div>
 
 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
     
-    <!-- main-js -->
-<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.4.3"></script>
-<script type="text/javascript" src="/js/plugins/ios-orientationchange-fix.js?v=1.4.3"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
-<script type="text/javascript" src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+    
 
-<script type="text/javascript" src="/js/method.js?v=1.4.3"></script>
-<script type="text/javascript" src="/js/blog.js?v=1.4.3"></script>
+    
 
-<!-- third-party -->
+    
 
+  </div>
 
+  
 
-
-
-
-<script type="text/javascript" src="/js/plugins/local_search.js?v=1.4.3"></script>
-<script type="text/javascript">
-	var search_path = "search.xml";
-	if (search_path.length === 0) {
-		search_path = "search.xml";
-	}
-	var path = "/" + search_path;
-	searchFunc(path, "local-search-input", "local-search-result");
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     
+
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f52bce1c8e1d93e4d2b8',
+    clientSecret: '8d0f73138b3c9fc9d951bba218ad1329693e22a1',
+    repo: 'comments',
+    owner: 'umrm',
+    admin: ['umrm'],
+    id: md5(location.pathname),
     
-        <script type="text/javascript" src="/js/plugins/gitmint.browser.js?v=1.4.3"></script>
-<script type="text/javascript" src="/js/plugins/gitment.js?v=1.4.3"></script>
+      language: 'zh-CN',
     
-
-
-
-
-
-    <!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-            processEscapes: true,
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-    });
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
 </script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
 
-<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
 
-
-
-
-
-
-
-    
 </body>
 </html>
