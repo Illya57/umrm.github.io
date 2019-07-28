@@ -3,64 +3,80 @@
   
     
     <entry>
-      <title><![CDATA[我的第一篇文章]]></title>
-      <url>/2019/07/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0-1/</url>
-      <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容<br>test</p>
+      <title><![CDATA[使用hexo搭建博客，并且部署到github]]></title>
+      <url>/2019/07/28/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E4%B8%94%E9%83%A8%E7%BD%B2%E5%88%B0github/</url>
+      <content type="html"><![CDATA[<h1 id="使用hexo搭建博客，并且部署到github"><a href="#使用hexo搭建博客，并且部署到github" class="headerlink" title="使用hexo搭建博客，并且部署到github"></a>使用hexo搭建博客，并且部署到github</h1><p>## </p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1.安装git （这个我就不细说了）<br>2.安装nodejs<br>3.安装hexo<br>4.搭建博客<br>5.写一篇文章<br>6.部署到github（你需要有一个github账号）</p>
+<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p>去官网下载最新版本，安装</p>
+<p>安装好之后可以验证一下：</p>
+<blockquote>
+<p>node -v</p>
+</blockquote>
+<p>然后安装cnpm（可以不使用cnpm）：</p>
+<blockquote>
+<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</blockquote>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>使用命令：</p>
+<blockquote>
+<p>cnpm install -g hexo-cli</p>
+</blockquote>
+<p>如果没有安装cnpm，就用npm：</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+<p>安装完之后可以验证一下：</p>
+<blockquote>
+<p>hexo -v</p>
+</blockquote>
+<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>直接在某个位置新建一个文件夹，名字随意，比如blog</p>
+<p>也可以在命令行窗口使用 mkdir blog 新建一个文件夹</p>
+<p>然后进到那个文件夹目录：</p>
+<blockquote>
+<p>cd blog</p>
+</blockquote>
+<p>再使用hexo生成一个博客：</p>
+<blockquote>
+<p>hexo init</p>
+</blockquote>
+<p>这样就成功在本地搭建了一个博客，可以启动看看：</p>
+<blockquote>
+<p>hexo s<br>ctrl+c可以停止</p>
+</blockquote>
+<p>这样就启动好了</p>
 <figure class="image-box">
-                <img src="001.jpg" alt="avatar" title class>
-                <p>avatar</p>
+                <img src="001.jpg" alt title class>
+                <p></p>
             </figure>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.xxxxxxxx.xxx" target="_blank" rel="noopener">www.xxxxxxxx.xxx</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[ffffff]]></title>
-      <url>/2019/07/27/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<p>## </p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[我的第一篇文章]]></title>
-      <url>/2019/07/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-      <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容<br>test</p>
-<figure class="image-box">
-                <img src="/img/001.jpg" alt="avatar" title class>
-                <p>avatar</p>
-            </figure>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.xxxxxxxx.xxx" target="_blank" rel="noopener">www.xxxxxxxx.xxx</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2019/07/25/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<h2 id="新建一篇文章"><a href="#新建一篇文章" class="headerlink" title="新建一篇文章"></a>新建一篇文章</h2><p>在blog目录下</p>
+<blockquote>
+<p>hexo new “我的文章”</p>
+</blockquote>
+<p>这个是基于markdown格式的,你可以去看看markdown语法。</p>
+<p>然后重新生成一下(在blog的根目录)</p>
+<blockquote>
+<p>hexo clean<br>hexo g</p>
+</blockquote>
+<p>刷新一下网页就可以看到你的文章了</p>
+<p>最后我们可以把它部署到github上</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>1.登录到你的github账号<br>2.新建一个仓库</p>
+<pre><code>仓库名字要是 你的github昵称.github.io
+如 umrm.github.io
+描述可以随便写一个   
+最后再create，就完成了。</code></pre><p>现在你有了一个空仓库</p>
+<h4 id="你需要安装一个Git的插件"><a href="#你需要安装一个Git的插件" class="headerlink" title="你需要安装一个Git的插件"></a>你需要安装一个Git的插件</h4><blockquote>
+<p>cnpm install –save hexo-deployer-git</p>
+</blockquote>
+<h4 id="再设置一下"><a href="#再设置一下" class="headerlink" title="再设置一下"></a>再设置一下</h4><p>在blog目录下打开配置文件_config.yml<br>找到deploy<br>把repo改成你刚建的那个仓库，别忘了空格</p>
+<pre><code>deploy:
+  type: git
+  repo: https://github.com/umrm/umrm.github.io.git
+  branch: master</code></pre><h4 id="可以部署了"><a href="#可以部署了" class="headerlink" title="可以部署了"></a>可以部署了</h4><p>使用hexo d命令来部署到github上</p>
+<blockquote>
+<p>hexo d</p>
+</blockquote>
+<p>第一次会需要你输入github的账号和密码登录一下，以后就不用了 </p>
+<h4 id="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><a href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问" class="headerlink" title="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"></a>成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</h4><p>hexo有一个默认的主题，你还可以在网上去下载别的主题</p>
 ]]></content>
       
         
