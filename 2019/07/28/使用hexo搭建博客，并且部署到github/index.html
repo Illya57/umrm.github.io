@@ -108,7 +108,7 @@
 <meta property="og:description" content="前言最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。 步骤1.安装git （这个我就不细说了）2.安装nodejs3.安装hexo4.搭建博客5.写一篇文章6.部署到github（你需要有一个github账号） 安装nodej">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/07/28/使用hexo搭建博客，并且部署到github/001.jpg">
-<meta property="og:updated_time" content="2019-07-28T12:52:51.484Z">
+<meta property="og:updated_time" content="2019-07-29T13:50:38.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建博客，并且部署到github">
 <meta name="twitter:description" content="前言最近突然想搭建一个自己的技术博客，想了想觉得可以使用hexo搭建一个静态的博客，部署在github上，再弄个域名，不用去买服务器，也不用后台。费了一番功夫，也算是弄好了。然后顺便把这个过程记录下来，这也就是我的第一篇文章。 步骤1.安装git （这个我就不细说了）2.安装nodejs3.安装hexo4.搭建博客5.写一篇文章6.部署到github（你需要有一个github账号） 安装nodej">
@@ -340,7 +340,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="UMR">
-      <meta itemprop="description" content="我的一个博客">
+      <meta itemprop="description" content="敢做就能赢">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -379,13 +379,23 @@
                 
               
 
-              <time title="创建时间：2019-07-28 14:07:07 / 修改时间：20:52:51" itemprop="dateCreated datePublished" datetime="2019-07-28T14:07:07+08:00">2019-07-28</time>
+              <time title="创建时间：2019-07-28 14:07:07" itemprop="dateCreated datePublished" datetime="2019-07-28T14:07:07+08:00">2019-07-28</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-29 21:50:38" itemprop="dateModified" datetime="2019-07-29T21:50:38+08:00">2019-07-29</time>
+              </span>
             
           
 
@@ -459,10 +469,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
 如 umrm.github.io
 描述可以随便写一个   
 最后再create，就完成了。</code></pre><p>现在你有了一个空仓库</p>
-<h4 id="你需要安装一个Git的插件"><a href="#你需要安装一个Git的插件" class="headerlink" title="你需要安装一个Git的插件"></a>你需要安装一个Git的插件</h4><blockquote>
-<p>cnpm install –save hexo-deployer-git</p>
-</blockquote>
-<h4 id="再设置一下"><a href="#再设置一下" class="headerlink" title="再设置一下"></a>再设置一下</h4><p>在blog目录下打开配置文件_config.yml<br>找到deploy<br>把repo改成你刚建的那个仓库，别忘了冒号后有空格</p>
+<h4 id="你需要安装一个Git的插件"><a href="#你需要安装一个Git的插件" class="headerlink" title="你需要安装一个Git的插件"></a>你需要安装一个Git的插件</h4><pre><code>cnpm install --save hexo-deployer-git</code></pre><h4 id="再设置一下"><a href="#再设置一下" class="headerlink" title="再设置一下"></a>再设置一下</h4><p>在blog目录下打开配置文件_config.yml<br>找到deploy<br>把repo改成你刚建的那个仓库，别忘了冒号后有空格</p>
 <pre><code>deploy:
   type: git
   repo: https://github.com/umrm/umrm.github.io.git
@@ -567,7 +574,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
     <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="UMR">
   
   <p class="site-author-name" itemprop="name">UMR</p>
-  <div class="site-description motion-element" itemprop="description">我的一个博客</div>
+  <div class="site-description motion-element" itemprop="description">敢做就能赢</div>
 </div>
 
 
