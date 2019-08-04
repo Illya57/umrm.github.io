@@ -7,15 +7,16 @@
       <url>/2019/08/04/%E4%BD%BF%E7%94%A8java%E5%81%9A%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E6%8C%82%E6%9C%BA%E8%84%9A%E6%9C%AC%EF%BC%88%E7%B1%BB%E4%BC%BC%E4%BA%8E%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5%E4%B9%8B%E7%B1%BB%E7%9A%84%EF%BC%89/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近突然有个想法能不能用java做一个游戏外挂，就是控制键盘鼠标的那种，虽然现在已经有按键精灵之类的软件，但是使用这些软件有时候容易被封号，使用java就比较安全了，java是运行在JVM中的，也不容易被游戏检测到。</p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>其实这个是一个入门级的，很简单，当然你要有一点java基础<br>我们先要用到这个包java.awt.Robot;<br>new一个Robot<br>Robot robot = new Robot();<br>然后就可以使用robot进行自动化操作啦</p>
-<h5 id="模拟按键"><a href="#模拟按键" class="headerlink" title="模拟按键"></a>模拟按键</h5><p>按下按键：robot.keyPress()；<br>弹起按键：robot.keyRelease();</p>
+<h3 id="模拟按键"><a href="#模拟按键" class="headerlink" title="模拟按键"></a>模拟按键</h3><p>按下按键：robot.keyPress()；<br>弹起按键：robot.keyRelease();</p>
 <pre><code>这里要注意的是：
 括号里需要填入那个按键对应的ASCII码 int类型，记不住ASCII码没关系，可以使用java里自带的KeyEvent
 如，要按下“A”键，就这样写：robot.keyPress(KeyEvent.VK_A);
-按空格：robot.keyPress(KeyEvent.VK_BACK_SPACE);</code></pre><h5 id="模拟鼠标"><a href="#模拟鼠标" class="headerlink" title="模拟鼠标"></a>模拟鼠标</h5><p>按下左键：robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);<br>按下中键：robot.mousePress(InputEvent.BUTTON2_DOWN_MASK);<br>按下右键：robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);</p>
-<p>抬起使用 robot.mouseRelease(同上);</p>
-<p>移动鼠标：robot.mouseMove(int x, int y);<br>x,y 对应的是电脑屏幕上的横纵坐标，显示左上角是0,0</p>
-<h5 id="还可以获得屏幕颜色"><a href="#还可以获得屏幕颜色" class="headerlink" title="还可以获得屏幕颜色"></a>还可以获得屏幕颜色</h5><p>获得屏幕指定像素的颜色使用：<br>robot.getPixelColor(int x, int y)<br>x,y同样是屏幕坐标<br>我们可以new一个color对象，来保存这个颜色<br>Color color = robot.getPixelColor(0, 0);</p>
+按空格：robot.keyPress(KeyEvent.VK_BACK_SPACE);</code></pre><h3 id="模拟鼠标"><a href="#模拟鼠标" class="headerlink" title="模拟鼠标"></a>模拟鼠标</h3><p>按下左键：robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);<br>按下中键：robot.mousePress(InputEvent.BUTTON2_DOWN_MASK);<br>按下右键：robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);</p>
+<p>抬起使用：robot.mouseRelease(同上);</p>
+<p>移动鼠标：robot.mouseMove(int x, int y);<br>x,y 对应的是电脑屏幕上的横纵坐标，显示器左上角是0,0</p>
+<h3 id="还可以获得屏幕颜色"><a href="#还可以获得屏幕颜色" class="headerlink" title="还可以获得屏幕颜色"></a>还可以获得屏幕颜色</h3><p>获得屏幕指定像素的颜色使用：<br>robot.getPixelColor(int x, int y)<br>x,y同样是屏幕坐标<br>我们可以new一个color对象，来保存这个颜色<br>Color color = robot.getPixelColor(0, 0);</p>
 <p>这个功能很好用，在游戏中可以根据某个位置的颜色来判断是否要做哪些操作。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>最后要注意一下，当你需要循环点击某个按键的时候，最好使用delay延时一下。<br>robot.delay(ms);<br>括号里面是时间单位是毫秒，而且为了模拟的更像人，时间间隔最好使用随机数。<br>比如 Random的nextInt(100); 就可以生成一个0-100之间的随机整数</p>
 ]]></content>
       
         <categories>
