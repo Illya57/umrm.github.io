@@ -3,6 +3,55 @@
   
     
     <entry>
+      <title><![CDATA[关于springMVC文件上传]]></title>
+      <url>/2019/08/10/%E5%85%B3%E4%BA%8EspringMVC%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
+      <content type="html"><![CDATA[<p>最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。</p>
+<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><p>上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;<br>类型转换时报错。这说明是页面传数据的方式有问题。<br>传文件的时候一定要用form表单的形式传，还有别忘了加enctype=”multipart/form-data”<br>像这样：</p>
+<pre><code>&lt;form action=&quot;/upload&quot; enctype=&quot;multipart/form-data&quot;&gt;
+
+&lt;input type=&quot;file&quot; name=&quot;testFile&quot;/&gt;
+
+&lt;input type=&quot;submit&quot; value=&quot;upload&quot;/&gt;
+
+&lt;/form&gt;</code></pre><p>注意：</p>
+<pre><code>如果用ajax提交表单就不能序列化，我之前就犯了这个错误（不过听说现在用FormData这个对象可以序列化上传文件，但我暂时还没用过）</code></pre><h3 id="其他要注意的地方"><a href="#其他要注意的地方" class="headerlink" title="其他要注意的地方"></a>其他要注意的地方</h3><p>一定要在springmvc配置文件里配置文件上传</p>
+<pre><code>&lt;bean id=&quot;multipartResolver&quot;  
+    class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;  
+    &lt;!-- 设置上传文件的最大尺寸为1MB --&gt;  
+    &lt;property name=&quot;maxUploadSize&quot;&gt;  
+        &lt;value&gt;1048576&lt;/value&gt;  
+    &lt;/property&gt;  
+&lt;/bean&gt; </code></pre><p>在springboot中可以通过实现WebMvcConfigurer接口，来配置</p>
+<pre><code>@Bean
+public MultipartResolver multipartResolver() {
+    CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+    resolver.setDefaultEncoding(&quot;UTF-8&quot;);
+    resolver.setResolveLazily(true); //resolveLazily属性启用是为了推迟文件解析，以在在UploadAction中捕获文件大小异常
+    resolver.setMaxInMemorySize(40960); //设定文件上传时写入内存的最大值，如果小于这个参数不会生成临时文件，默认为10240
+    resolver.setMaxUploadSize(10 * 1024 * 1024); // 上传文件大小 10M 10*1024*1024
+    return resolver;
+}</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> 开发中的问题 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> spring </tag>
+            
+            <tag> web </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用java做一个游戏挂机脚本（类似于按键精灵之类的）]]></title>
       <url>/2019/08/04/%E4%BD%BF%E7%94%A8java%E5%81%9A%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E6%8C%82%E6%9C%BA%E8%84%9A%E6%9C%AC%EF%BC%88%E7%B1%BB%E4%BC%BC%E4%BA%8E%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5%E4%B9%8B%E7%B1%BB%E7%9A%84%EF%BC%89/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近突然有个想法能不能用java做一个游戏外挂，就是控制键盘鼠标的那种，虽然现在已经有按键精灵之类的软件，但是使用这些软件有时候容易被封号，使用java就比较安全了，java是运行在JVM中的，也不容易被游戏检测到。</p>
