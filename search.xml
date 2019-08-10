@@ -6,7 +6,7 @@
       <title><![CDATA[关于springMVC文件上传]]></title>
       <url>/2019/08/10/%E5%85%B3%E4%BA%8EspringMVC%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
       <content type="html"><![CDATA[<p>最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。</p>
-<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><p>上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;<br>类型转换时报错。这说明是页面传数据的方式有问题。<br>传文件的时候一定要用form表单的形式传，还有别忘了加enctype=”multipart/form-data”<br>像这样：</p>
+<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><p>上传文件的时候报错，我调试了一下，发现在这一步时有问题<br>MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;<br>类型转换时报错。这说明是页面传数据的方式有问题。<br>传文件的时候一定要用form表单的形式传，还有别忘了加enctype=”multipart/form-data”<br>像这样：</p>
 <pre><code>&lt;form action=&quot;/upload&quot; enctype=&quot;multipart/form-data&quot;&gt;
 
 &lt;input type=&quot;file&quot; name=&quot;testFile&quot;/&gt;
@@ -34,7 +34,7 @@ public MultipartResolver multipartResolver() {
       
         <categories>
             
-            <category> 开发中的问题 </category>
+            <category> 开发中遇到的问题 </category>
             
         </categories>
         
