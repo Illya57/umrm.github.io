@@ -119,7 +119,7 @@ hexo g</code></pre><p>刷新一下网页就可以看到你的文章了</p>
   type: git
   repo: https://github.com/umrm/umrm.github.io.git
   branch: master</code></pre><h4 id="可以部署了"><a href="#可以部署了" class="headerlink" title="可以部署了"></a>可以部署了</h4><p>使用hexo d命令来部署到github上</p>
-<pre><code>hexo d</code></pre><p>第一次会需要你输入github的账号和密码登录一下，以后就不用了 </p>
+<pre><code>hexo d</code></pre><p>第一次会需要你输入github的账号和密码登录一下</p>
 <h4 id="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"><a href="#成功之后就可以在浏览器上可以直接通过你的仓库名进行访问" class="headerlink" title="成功之后就可以在浏览器上可以直接通过你的仓库名进行访问"></a>成功之后就可以在浏览器上可以直接通过你的仓库名进行访问</h4><p>hexo有一个默认的主题，你还可以在网上去下载别的主题</p>
 ]]></content>
       
