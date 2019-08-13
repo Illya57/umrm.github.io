@@ -13,8 +13,7 @@
 
 &lt;input type=&quot;submit&quot; value=&quot;upload&quot;/&gt;
 
-&lt;/form&gt;</code></pre><p>注意：</p>
-<pre><code>如果用ajax提交表单就不能序列化，我之前就犯了这个错误（不过听说现在用FormData这个对象可以序列化上传文件，但我暂时还没用过）</code></pre><h3 id="其他要注意的地方"><a href="#其他要注意的地方" class="headerlink" title="其他要注意的地方"></a>其他要注意的地方</h3><p>一定要在springmvc配置文件里配置文件上传</p>
+&lt;/form&gt;</code></pre><h3 id="其他要注意的地方"><a href="#其他要注意的地方" class="headerlink" title="其他要注意的地方"></a>其他要注意的地方</h3><p>一定要在springmvc配置文件里配置文件上传</p>
 <pre><code>&lt;bean id=&quot;multipartResolver&quot;  
     class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;  
     &lt;!-- 设置上传文件的最大尺寸为1MB --&gt;  
