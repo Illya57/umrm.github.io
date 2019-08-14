@@ -99,18 +99,18 @@
   };
 </script>
 
-  <meta name="description" content="最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。 start上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;类型转换时报错。这说明是页面传数据的方式有问题">
+  <meta name="description" content="最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。 ##上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;类型转换时报错。这说明是页面传数据的方式有问题。传文">
 <meta name="keywords" content="java,spring,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于springMVC文件上传">
 <meta property="og:url" content="http://yoursite.com/2019/08/10/关于springMVC文件上传/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。 start上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;类型转换时报错。这说明是页面传数据的方式有问题">
+<meta property="og:description" content="最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。 ##上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;类型转换时报错。这说明是页面传数据的方式有问题。传文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-13T13:12:28.969Z">
+<meta property="og:updated_time" content="2019-08-14T13:14:17.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于springMVC文件上传">
-<meta name="twitter:description" content="最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。 start上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;类型转换时报错。这说明是页面传数据的方式有问题">
+<meta name="twitter:description" content="最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。 ##上传文件的时候报错，我调试了一下，发现在这一步时有问题MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;类型转换时报错。这说明是页面传数据的方式有问题。传文">
 
 
 
@@ -392,7 +392,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-13 21:12:28" itemprop="dateModified" datetime="2019-08-13T21:12:28+08:00">2019-08-13</time>
+                <time title="修改时间：2019-08-14 21:14:17" itemprop="dateModified" datetime="2019-08-14T21:14:17+08:00">2019-08-14</time>
               </span>
             
           
@@ -442,7 +442,7 @@
 
       
         <p>最近开发springboot的项目时遇到了一个问题，就是web页面上传文件到服务器总是上传不了，我查了一些资料，终于解决了，总结一下。</p>
-<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><p>上传文件的时候报错，我调试了一下，发现在这一步时有问题<br>MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;<br>类型转换时报错。这说明是页面传数据的方式有问题。<br>传文件的时候一定要用form表单的形式传，还有别忘了加enctype=”multipart/form-data”<br>像这样：</p>
+<p>##<br>上传文件的时候报错，我调试了一下，发现在这一步时有问题<br>MultipartHttpServletRequest mRequest = (MultipartHttpServletRequest) request;<br>类型转换时报错。这说明是页面传数据的方式有问题。<br>传文件的时候如果用form表单的形式传，别忘了加enctype=”multipart/form-data”<br>像这样：</p>
 <pre><code>&lt;form action=&quot;/upload&quot; enctype=&quot;multipart/form-data&quot;&gt;
 
 &lt;input type=&quot;file&quot; name=&quot;testFile&quot;/&gt;
@@ -678,7 +678,7 @@ public MultipartResolver multipartResolver() {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#start"><span class="nav-number">1.</span> <span class="nav-text">start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#其他要注意的地方"><span class="nav-number">1.1.</span> <span class="nav-text">其他要注意的地方</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#其他要注意的地方"><span class="nav-number">1.</span> <span class="nav-text">其他要注意的地方</span></a></li></ol></div>
             
 
           </div>
